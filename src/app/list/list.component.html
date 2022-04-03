@@ -1,0 +1,32 @@
+<div class="container wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="inner">
+                <h1 class="page-title" style="text-align: center;">Phone Book List</h1>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Phone Number</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users">
+                            <th scope="row">{{user.id}}</th>                            
+                            <td>{{user.name}}</td>
+                            <td>{{user.phoneNumber}}</td>
+                            <td>{{user.address}}</td>
+                            <td>
+                                <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/edit/', user.id]">Edit</button>
+                                <button type="button" class="btn btn-danger btn-sm" (click)="deleteUser(user)">Remove</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
