@@ -73,7 +73,7 @@ export class FormComponent implements OnInit {
 
     // window.location.reload();
     //reload form
-    // this.editUserForm();
+    this.editUserForm();
 
   }
   
